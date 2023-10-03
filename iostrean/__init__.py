@@ -1,2 +1,2 @@
-from input_data import *
-from output_data import *
+from iostrean.input_data import *
+from iostrean.output_data import *
