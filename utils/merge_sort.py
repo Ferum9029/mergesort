@@ -1,8 +1,9 @@
 def merge(a: list, b: list) -> list:
-    i = 0
-    j = 0
+    # scope indexes of a and b
+    i, j = 0, 0
     c = []
-    # gonna kms in 3 2 1 less go
+
+    # adding values from a and b to c in ascending order
     while i != len(a) and j != len(b):
         if a[i] < b[j]:
             c.append(a[i])
@@ -10,5 +11,7 @@ def merge(a: list, b: list) -> list:
         else:
             c.append(b[j])
             j += 1
-    return c + (a[i:] if i != len(a) else b[j:] if j != len(b) else [])
+
+    # returning c and the rest of values if not all elements are in c
+    return c + (a[i:] if i != len(a) else b[j:])
 
